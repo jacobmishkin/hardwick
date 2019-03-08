@@ -27,12 +27,10 @@ const WidgetWrapper = styled.div`
 
 const widget = () => {
   const widgetQuery = useStaticQuery(graphql`
-    query HeaderQuery {
-      allMarkdownRemark {
-        edges {
-          node {
-            rawMarkdownBody
-          }
+    query widgetQuery {
+      file(name: { eq: "post1" }) {
+        childMarkdownRemark {
+          rawMarkdownBody
         }
       }
     }
@@ -40,11 +38,7 @@ const widget = () => {
 
   return (
     <WidgetWrapper>
-      <p>
-        {widgetQuery.allMarkdownRemark.edges.map(
-          edge => edge.node.rawMarkdownBody
-        )}
-      </p>
+      <p>{widgetQuery.file.childMarkdownRemark.rawMarkdownBody}</p>
     </WidgetWrapper>
   );
 };

@@ -26,7 +26,6 @@ const Layout = ({ children }) => (
             <main>{children}</main>
           </Lines>
         </Inner>
-
         <footer>Hardwick © {new Date().getFullYear()}</footer>
       </>
     )}
@@ -38,7 +37,7 @@ Layout.propTypes = {
 };
 
 const Inner = styled.div`
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
 
   @media (min-width: 590px) {
@@ -47,7 +46,7 @@ const Inner = styled.div`
 `;
 
 const Lines = styled.div`
-  background: repeat-y;
+  background: repeat-y center center;
   width: 100%;
   height: 100vh;
   margin: 0 auto;
