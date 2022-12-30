@@ -6,7 +6,7 @@
   "author": "Jacob Mishkin",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
-    "gatsby": "^2.1.0",
+    "gatsby": "^2.32.13",
     "gatsby-cli": "^2.4.12",
     "gatsby-image": "^2.0.29",
     "gatsby-plugin-manifest": "^2.0.17",
